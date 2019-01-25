@@ -30,8 +30,10 @@ function get_xml_feed_item( $feed_url ) {
 }
 
 function get_feed_urls() {
-  return array(
-    'https://css-tricks.com/feed/',
-    'http://bradfrost.com/feed/'
-  );
+  $feeds_obj = db_get_first_entry( 'theme_options', array(
+    'name' => FEED_URLS_OPTION
+  ));
+  $feeds = $feeds_obj ? $feeds_obj['value'] : '';
+  $feeds = explode( "\n", $feeds );
+  return $feeds;
 }

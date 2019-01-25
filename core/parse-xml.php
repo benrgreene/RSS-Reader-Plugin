@@ -16,6 +16,7 @@ function xml_feed_to_array( $xml_feed ) {
   foreach( $raw_items as $item ) {
     $to_add            = (array) $item;
     $to_add['pubDate'] = strtotime( $to_add['pubDate'] );
+    $to_add['channel'] = $feed_object->channel->title;
     $items[]           = $to_add;
   }
   return $items;

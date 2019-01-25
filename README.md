@@ -2,4 +2,4 @@
 
 This is a plugin for the SPA that adds an RSS Reader to the framework, accessible through an API endpoint (`get/rss/reader`)
 
-Plugin is still under construction, so currently feed URLs are hardcoded in (will be updated to be an editable option via the admin panel)
+There is a theme option ('RSS Feed URLs') for setting the feed URLs to pull from. These are setting by adding the URLs seperated by a newline character.
